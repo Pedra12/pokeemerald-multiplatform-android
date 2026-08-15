@@ -1,6 +1,6 @@
 # pokeemerald-multiplatform
 
-An experimental Windows, Linux, and Android port of the [Pokemon Emerald decompilation](https://github.com/pret/pokeemerald).
+Based on the existing pokeemerald PC/SDL port work by Kurausukun, NT_x86, Normmatt, camthesaxman and other contributors. This fork focuses on multiplatform support, Android, ROM-hack importing, and experimental 2.5D rendering.
 
 The project runs the decompiled game code directly. It is not a bundled GBA emulator and does not include a commercial ROM.
 
