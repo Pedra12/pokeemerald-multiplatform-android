@@ -1137,10 +1137,10 @@ RustboroCity_Text_MayHiLetsRegister:
 
 RustboroCity_Text_RegisteredMay:
 	.string "MAY registrada\n"
-	.string "in the POKéNAV.$"
+	.string "no POKéNAV.$"
 
 RustboroCity_Text_MayPassedBrineyWantToBattle:
-	.string "MAY: Oh, by the way, I passed\n"
+	.string "MAY: Ah, a proposito, encontrei\n"
 	.string "com o SR. BRINEY na FLORESTA DE PETALBURG.\p"
 	.string "Acho que ele esta voltando para sua\n"
 	.string "casa perto do mar.\p"
@@ -1168,11 +1168,11 @@ RustboroCity_Text_MayDefeat:
 	.string "Voce e melhor do que eu esperava!$"
 
 RustboroCity_Text_MayMrBrineyHint:
-	.string "MAY: Oh, by the way, MR. BRINEY, who\n"
+	.string "MAY: Ah, a proposito, o SR. BRINEY, por quem\n"
 	.string "I just passed…\p"
-	.string "{PLAYER}{KUN}, you just moved here so you\n"
-	.string "might not know this, but MR. BRINEY\l"
-	.string "was once a revered seafarer.$"
+	.string "{PLAYER}{KUN}, voce acabou de se mudar para ca, entao\n"
+	.string "talvez nao saiba, mas o SR. BRINEY\l"
+	.string "ja foi um marinheiro muito respeitado.$"
 
 RustboroCity_Text_BrendanHiLetsRegister:
 	.string "BRENDAN: Ei, {PLAYER}!\p"
@@ -1184,7 +1184,7 @@ RustboroCity_Text_BrendanHiLetsRegister:
 
 RustboroCity_Text_RegisteredBrendan:
 	.string "BRENDAN registrado\n"
-	.string "in the POKéNAV.$"
+	.string "no POKéNAV.$"
 
 RustboroCity_Text_BrendanPassedBrineyWantToBattle:
 	.string "BRENDAN: A proposito, {PLAYER}, passei\n"
