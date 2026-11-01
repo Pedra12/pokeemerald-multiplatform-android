@@ -71,39 +71,6 @@ foreach(OBJECT IN LISTS MAKE_ASM_OBJECTS)
         message(FATAL_ERROR "Expected game object was not generated: ${OBJECT}")
     endif()
 endforeach()
-# Identify exactly which original assembly object still emits SPECIAL_* relocations.
-find_program(ARM_NONE_EABI_OBJDUMP arm-none-eabi-objdump
-    HINTS "$ENV{ARM_NONE_EABI_TOOLCHAIN}/bin"
-    REQUIRED)
-find_program(ARM_NONE_EABI_NM arm-none-eabi-nm
-    HINTS "$ENV{ARM_NONE_EABI_TOOLCHAIN}/bin"
-    REQUIRED)
-execute_process(
-    COMMAND python3 -c [=[
-import subprocess, sys
-found = False
-for obj in sys.argv[1:]:
-    rel = subprocess.run(["arm-none-eabi-objdump", "-r", obj], text=True, capture_output=True, check=True).stdout
-    hits = [line for line in rel.splitlines() if "SPECIAL_" in line]
-    if hits:
-        found = True
-        print("SPECIAL relocation source:", obj)
-        print("\n".join(hits))
-        symbols = subprocess.run(["arm-none-eabi-nm", "-a", obj], text=True, capture_output=True, check=True).stdout
-        print("SPECIAL symbol bindings:")
-        print("\n".join(line for line in symbols.splitlines() if "SPECIAL_" in line))
-if not found:
-    print("No SPECIAL_* relocations in individual game objects.")
-]=] ${MAKE_ASM_OBJECTS}
-    WORKING_DIRECTORY "${ROOT}"
-    RESULT_VARIABLE SPECIAL_RELOC_SCAN_RESULT
-    OUTPUT_VARIABLE SPECIAL_RELOC_REPORT
-    ERROR_VARIABLE SPECIAL_RELOC_SCAN_ERROR)
-if(NOT SPECIAL_RELOC_SCAN_RESULT EQUAL 0)
-    message(FATAL_ERROR "Could not inspect game object relocations: ${SPECIAL_RELOC_SCAN_ERROR}")
-endif()
-message(STATUS "Game special-index relocation diagnosis:\n${SPECIAL_RELOC_REPORT}")
-
 # Match the upstream Android port: merge game assembly objects and move
 # read-only data into a writable section so Android can apply ARM relocations.
 find_program(ARM_NONE_EABI_LD arm-none-eabi-ld
