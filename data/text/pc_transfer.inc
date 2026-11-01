@@ -23,9 +23,9 @@ gText_PkmnTransferredLanettesPCBoxFull::
 	.string "a CAIXA “{STR_VAR_1}”.$"
 
 gText_NoMoreRoomForPokemon::
-	.string "Não há mais espaço para POKéMON!\p"
-	.string "As CAIXAS DE POKéMON estão cheias\n"
-	.string "e não podem receber mais nenhum!$"
+	.string "Näo há mais espaço para POKéMON!\p"
+	.string "As CAIXAS DE POKéMON estäo cheias\n"
+	.string "e näo podem receber mais nenhum!$"
 
 gText_NicknameThisPokemon::
 	.string "Deseja dar um apelido para\n"
