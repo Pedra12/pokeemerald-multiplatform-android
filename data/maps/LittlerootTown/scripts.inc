@@ -905,22 +905,22 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	return
 
 LittlerootTown_Text_OurNewHomeLetsGoInside:
-	.string "MäE: {PLAYER}, chegamos, querido!\p"
+	.string "MaE: {PLAYER}, chegamos, querido!\p"
 	.string "A viagem com as nossas coisas no\n"
-	.string "caminhäo deve ter sido cansativa.\p"
+	.string "caminhao deve ter sido cansativa.\p"
 	.string "Bem, essa é a vila de LITTLEROOT.\p"
 	.string "Você gostou?\n"
 	.string "Essa é a nossa nova casa!\p"
 	.string "Tem um estilo peculiar, mas parece ser um\n"
-	.string "lugar bom pra viver, näo acha?\p"
+	.string "lugar bom pra viver, nao acha?\p"
 	.string "E você tem seu próprio quarto, {PLAYER}!\n"
 	.string "Vamos pra dentro.$"
 
 LittlerootTown_Text_WaitPlayer:
-	.string "MäE: Espera, {PLAYER}!$"
+	.string "MaE: Espera, {PLAYER}!$"
 
 LittlerootTown_Text_WearTheseRunningShoes:
-	.string "MäE: {PLAYER}! {PLAYER}! Você\n"
+	.string "MaE: {PLAYER}! {PLAYER}! Você\n"
 	.string "se introduziu pro PROF. BIRCH?\p"
 	.string "Ah! Que POKéMON adorável!\n"
 	.string "Você pegou ele com o PROF. BIRCH. Que bom!\p"
@@ -928,14 +928,14 @@ LittlerootTown_Text_WearTheseRunningShoes:
 	.string "Você combina bem com o POKéMON!\p"
 	.string "Aqui, querido! Se você vai sair em uma\n"
 	.string "aventura, use esses TêNIS DE CORRIDA.\p"
-	.string "Eles daräo um toque em seu passo!$"
+	.string "Eles darao um toque em seu passo!$"
 
 LittlerootTown_Text_SwitchShoesWithRunningShoes:
 	.string "{PLAYER} trocou de tênis com o\n"
 	.string "TêNIS DE CORRIDA.$"
 
 LittlerootTown_Text_ExplainRunningShoes:
-	.string "MäE: {PLAYER}, esses tenis vieram com\n"
+	.string "MaE: {PLAYER}, esses tenis vieram com\n"
 	.string "instrucoes.\p"
 	.string "“Aperte o botao B usando estes\n"
 	.string "TENIS DE CORRIDA para correr mais rapido!\p"
@@ -965,12 +965,12 @@ LittlerootTown_Text_BirchSpendsDaysInLab:
 	.string "um tempo em casa?$"
 
 LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut:
-	.string "Na, na, ni, na, näo!\p"
+	.string "Na, na, ni, na, nao!\p"
 	.string "Se você sair e ir pra grama,\n"
-	.string "POKéMONs selvagens apareceräo!$"
+	.string "POKéMONs selvagens aparecerao!$"
 
 LittlerootTown_Text_DangerousIfYouDontHavePokemon:
-	.string "Vai ser perigoso se você näo\n"
+	.string "Vai ser perigoso se você nao\n"
 	.string "tiver nenhum POKéMON.$"
 
 LittlerootTown_Text_CanYouGoSeeWhatsHappening:
@@ -984,7 +984,7 @@ LittlerootTown_Text_CanYouGoSeeWhatsHappening:
 
 LittlerootTown_Text_YouSavedBirch:
 	.string "Você salvou o PROF. BIRCH!\n"
-	.string "Eu estou täo orgulhosa!"
+	.string "Eu estou tao orgulhosa!"
 
 LittlerootTown_Text_GoodLuckCatchingPokemon:
 	.string "Você está indo pegar POKéMON?\n"
@@ -992,7 +992,7 @@ LittlerootTown_Text_GoodLuckCatchingPokemon:
 
 LittlerootTown_Text_TownSign:
 	.string "VILA LITTLEROOT\n"
-	.string "“Uma vila que näo pode ser tingida de nenhuma cor.”$"
+	.string "“Uma vila que nao pode ser tingida de nenhuma cor.”$"
 
 LittlerootTown_Text_ProfBirchsLab:
 	.string "LABORATóRIO POKéMON do PROF. BIRCH$"
