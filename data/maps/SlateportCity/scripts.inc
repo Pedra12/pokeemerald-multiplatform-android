@@ -955,7 +955,7 @@ SlateportCity_Text_WonderIfLighthouseStartlesPokemon:
 	.string "que vivem no mar?$"
 
 SlateportCity_Text_SeaweedFullOfLife:
-	.string "Ooh, veja só!\p"
+	.string "Uau, veja só!\p"
 	.string "As algas que encontramos por aqui\n"
 	.string "sao frescas e cheias de vida.\p"
 	.string "Parece até que elas podem se erguer\n"
@@ -1272,7 +1272,7 @@ SlateportCity_Text_ExplainBerryPowder:
 	.string "CENTROS POKéMON para triturar FRUTAS.\p"
 	.string "As máquinas TRITURADORAS DE FRUTAS ficam\n"
 	.string "no CANTO DIRETO, no andar de cima.\p"
-	.string "Did you know?\p"
+	.string "Você sabia?\p"
 	.string "Você poderia fazer PÓ DE FRUTA para\n"
 	.string "mim usando aquelas máquinas?\p"
 	.string "Posso preparar vários tipos de remédio\n"
@@ -1308,7 +1308,7 @@ SlateportCity_Text_ComeBackToTradeBerryPowder:
 	.string "Volte se quiser trocar seu\n"
 	.string "PÓ DE FRUTA por algum remédio.\p"
 	.string "Estou sempre organizando um bazar aqui.\p"
-	.string "Did you know?$"
+	.string "Você sabia?$"
 
 SlateportCity_Text_YouDroveTeamAquaAway:
 	.string "SCOTT: Ué?\n"
