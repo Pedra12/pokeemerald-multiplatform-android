@@ -340,7 +340,7 @@ PetalburgWoods_Text_YouHaveToHelpMe:
 	.string "Você precisa me ajudar, por favor!$"
 
 PetalburgWoods_Text_NoOneCrossesTeamAqua:
-	.string "Hã? O que você pensa que está fazendo?\n"
+	.string "Ha? O que você pensa que está fazendo?\n"
 	.string "O quê? Vai protegê-lo?\p"
 	.string "Quem cruza o caminho da EQUIPE AQUA\n"
 	.string "nao recebe misericórdia, nem mesmo uma criança!\p"
@@ -428,14 +428,14 @@ PetalburgWoods_Text_IveBeenTrainingHard:
 
 PetalburgWoods_Text_StayOutOfTallGrass:
 	.string "Ei, você!\n"
-	.string "Seus POKÉMON estão bem?\p"
+	.string "Seus POKÉMON estao bem?\p"
 	.string "Se seus POKÉMON estiverem fracos e você quiser\n"
 	.string "evitar batalhas, fique longe\l"
 	.string "da grama alta.$"
 
 PetalburgWoods_Text_HiddenItemsExplanation:
 	.string "Às vezes, há coisas no\n"
-	.string "chão mesmo que você nao consiga vê-las.\p"
+	.string "chao mesmo que você nao consiga vê-las.\p"
 	.string "Por isso, sempre verifico onde estou\n"
 	.string "pisando.$"
 
