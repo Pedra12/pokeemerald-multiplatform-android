@@ -34,9 +34,6 @@ find_program(GNU_MAKE make REQUIRED)
 
 file(GLOB GAME_ASM CONFIGURE_DEPENDS
     "${ROOT}/asm/*.s"
-    "${ROOT}/src/*.s"
-    "${ROOT}/src/*/*.s"
-    "${ROOT}/src/*/*/*.s"
     "${ROOT}/data/*.s"
     "${ROOT}/sound/songs/*.s")
 file(GLOB MIDI_FILES CONFIGURE_DEPENDS "${ROOT}/sound/songs/midi/*.mid")
