@@ -41,7 +41,7 @@ jobs:
           import subprocess
 
           roots = ["src", "gflib", "data", "asm", "include", "sound"]
-          pattern = re.compile(r'INCBIN_[A-Za-z0-9_]+\s*\\(\s*"([^"]+)"|\\.incbin\s+"([^"]+)"')
+          pattern = re.compile(r'INCBIN_[A-Za-z0-9_]+\s*\(\s*"([^"]+)"|\.incbin\s+"([^"]+)"')
           assets = set()
           for root in roots:
               base = pathlib.Path(root)
