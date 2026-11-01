@@ -53,7 +53,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          set +o pipefail
           yes | "$SDKMANAGER" --licenses
+          LICENSE_STATUS=${PIPESTATUS[1]}
+          set -o pipefail
+          if [ "$LICENSE_STATUS" -ne 0 ]; then
+            echo "Falha ao aceitar as licenças do Android SDK (status $LICENSE_STATUS)"
+            exit "$LICENSE_STATUS"
+          fi
           "$SDKMANAGER" "platform-tools" "platforms;android-36" "build-tools;36.0.0" "ndk;26.3.11579264" "cmake;3.22.1"
 
       - name: Apply SDL2 Android lifecycle patch
