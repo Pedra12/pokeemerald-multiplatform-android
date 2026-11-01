@@ -71,7 +71,7 @@ set(GAME_DATA_OBJECT "${CMAKE_BINARY_DIR}/generated/game_data.o")
 add_custom_command(
     OUTPUT "${GAME_DATA_OBJECT}"
     COMMAND "${ARM_NONE_EABI_LD}" -r -o "${GAME_DATA_OBJECT}.tmp" ${GENERATED_ASM}
-    COMMAND "${ARM_NONE_EABI_OBJCOPY}" --rename-section .rodata=.data,alloc,load,data,contents "${GAME_DATA_OBJECT}.tmp" "${GAME_DATA_OBJECT}"
+    COMMAND "${ARM_NONE_EABI_OBJCOPY}" --wildcard --localize-symbol=SPECIAL_* --rename-section .rodata=.data,alloc,load,data,contents "${GAME_DATA_OBJECT}.tmp" "${GAME_DATA_OBJECT}"
     DEPENDS ${GENERATED_ASM}
     VERBATIM)
 set_source_files_properties("${GAME_DATA_OBJECT}" PROPERTIES GENERATED TRUE EXTERNAL_OBJECT TRUE)
