@@ -1,5 +1,5 @@
 Text_PictureBookShelf:
-	.string "Há uma coleção de livros ilustrados de POKÉMON.$"
+	.string "Há uma coleçao de livros ilustrados de POKÉMON.$"
 
 Text_BookShelf:
 	.string "Está cheio de livros de todos os tipos.$"
@@ -19,7 +19,7 @@ Text_EmptyTrashCan:
 	.string "Está vazio.$"
 
 Text_ShopShelf:
-	.string "As prateleiras estão cheias de\n"
+	.string "As prateleiras estao cheias de\n"
 	.string "produtos de POKÉMON.$"
 
 Text_Blueprint:
