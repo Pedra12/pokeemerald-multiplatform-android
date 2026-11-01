@@ -34,25 +34,25 @@ CableClub_Text_NeedTwoMonsToTrade:
 
 CableClub_Text_CantTradeEnigmaBerry:
 	.string "Um POKÉMON que esteja segurando a\n"
-	.string "BERRY {STR_VAR_1} não pode ser trocado.$"
+	.string "BERRY {STR_VAR_1} nao pode ser trocado.$"
 
 gText_PleaseWaitForLink::
 	.string "Aguarde.\n"
-	.string "… … Botão B: Cancelar$"
+	.string "… … Botao B: Cancelar$"
 
 gText_ConfirmLinkWhenPlayersReady::
 	.string "Quando todos os jogadores estiverem prontos…\n"
-	.string "Botão A: Confirmar\l"
-	.string "Botão B: Cancelar$"
+	.string "Botao A: Confirmar\l"
+	.string "Botao B: Cancelar$"
 
 gText_ConfirmStartLinkWithXPlayers::
-	.string "Iniciar conexão com {STR_VAR_1} jogadores.\n"
-	.string "Botão A: Confirmar\l"
-	.string "Botão B: Cancelar$"
+	.string "Iniciar conexao com {STR_VAR_1} jogadores.\n"
+	.string "Botao A: Confirmar\l"
+	.string "Botao B: Cancelar$"
 
 gText_AwaitingLinkup::
-	.string "Aguardando conexão…\n"
-	.string "… … Botão B: Cancelar$"
+	.string "Aguardando conexao…\n"
+	.string "… … Botao B: Cancelar$"
 
 @ Unused
 CableClub_Text_OkayToSaveProgress::
@@ -66,12 +66,12 @@ CableClub_Text_DirectYouToYourRoom:
 	.string "Vou levar você até sua sala.$"
 
 Text_SomeoneIsNotReadyToLink:
-	.string "Alguém ainda não está pronto para conectar.\p"
+	.string "Alguém ainda nao está pronto para conectar.\p"
 	.string "Volte quando todos tiverem\n"
 	.string "terminado os preparativos.$"
 
 Text_LinkErrorPleaseReset:
-	.string "Desculpe, ocorreu um erro de conexão…\n"
+	.string "Desculpe, ocorreu um erro de conexao…\n"
 	.string "Reinicie e tente novamente.$"
 
 Text_PlayersMadeDifferentSelections:
@@ -86,15 +86,15 @@ CableClub_Text_IncorrectNumberOfParticipants:
 	.string "incorreto.$"
 
 CableClub_Text_CantSingleBattleWithXPlayers:
-	.string "O modo BATALHA INDIVIDUAL não pode ser\n"
+	.string "O modo BATALHA INDIVIDUAL nao pode ser\n"
 	.string "jogado por {STR_VAR_1} jogadores.$"
 
 CableClub_Text_CantDoubleBattleWithXPlayers:
-	.string "O modo BATALHA DUPLA não pode ser\n"
+	.string "O modo BATALHA DUPLA nao pode ser\n"
 	.string "jogado por {STR_VAR_1} jogadores.$"
 
 CableClub_Text_NeedFourPlayers:
-	.string "São necessários quatro jogadores para\n"
+	.string "Sao necessários quatro jogadores para\n"
 	.string "este modo de batalha.$"
 
 CableClub_Text_PleaseConfirmNumberAndRestart:
@@ -102,11 +102,11 @@ CableClub_Text_PleaseConfirmNumberAndRestart:
 	.string "jogadores e tente novamente.$"
 
 Text_TerminateLinkConfirmation:
-	.string "A conexão será encerrada se você\n"
+	.string "A conexao será encerrada se você\n"
 	.string "sair da sala. Deseja continuar?$"
 
 Text_TerminateLinkPleaseWait:
-	.string "Encerrando conexão…\n"
+	.string "Encerrando conexao…\n"
 	.string "Você será levado para fora\l"
 	.string "da sala. Aguarde.$"
 
@@ -115,11 +115,11 @@ CableClub_Text_TooBusyToNotice:
 	.string "perceber…$"
 
 CableClub_Text_GotToLookAtTrainerCard:
-	.string "Legal! Vou ver o CARTÃO DE TREINADOR\n"
+	.string "Legal! Vou ver o CARTAO DE TREINADOR\n"
 	.string "de {STR_VAR_1}!$"
 
 CableClub_Text_GotToLookAtColoredTrainerCard:
-	.string "Legal! Vou ver o CARTÃO DE TREINADOR\n"
+	.string "Legal! Vou ver o CARTAO DE TREINADOR\n"
 	.string "de {STR_VAR_1}!\p"
 	.string "It's a {STR_VAR_2} card!$"
 
@@ -135,7 +135,7 @@ RecordCorner_Text_ThanksForComing:
 	.string "Obrigado por vir.$"
 
 CableClub_Text_TrainerCardDataOverwritten:
-	.string "Os dados do CARTÃO DE TREINADOR serão\n"
+	.string "Os dados do CARTAO DE TREINADOR serao\n"
 	.string "substituídos.$"
 
 CableClub_Text_HopeToSeeYouAgain:
@@ -143,16 +143,16 @@ CableClub_Text_HopeToSeeYouAgain:
 
 CableClub_Text_NotSetUpForFarAwayRegion:
 	.string "Sinto muitíssimo.\p"
-	.string "Ainda não podemos realizar trocas\n"
-	.string "com TREINADORES de regiões\l"
+	.string "Ainda nao podemos realizar trocas\n"
+	.string "com TREINADORES de regioes\l"
 	.string "distantes…$"
 
 CableClub_Text_OtherTrainerNotReady:
-	.string "O outro TREINADOR não está pronto.$"
+	.string "O outro TREINADOR nao está pronto.$"
 
 CableClub_Text_YouHaveAMonThatCantBeTaken:
 	.string "Você tem pelo menos um POKÉMON\n"
-	.string "que não pode ser retirado.$"
+	.string "que nao pode ser retirado.$"
 
 RecordCorner_Text_TakeSeatAndWait:
 	.string "Please take your seat and wait.$"
