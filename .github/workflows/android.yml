@@ -28,7 +28,7 @@ jobs:
       - name: Install ARM binutils and build tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential gcc-arm-none-eabi binutils-arm-none-eabi
+          sudo apt-get install -y build-essential binutils-arm-none-eabi libpng-dev zlib1g-dev pkg-config
           make tools
           make generated
 
