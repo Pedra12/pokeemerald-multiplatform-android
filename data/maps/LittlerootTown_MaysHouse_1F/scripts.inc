@@ -332,7 +332,7 @@ RivalsHouse_1F_Text_LikeChildLikeFather:
 	.string "Tal pai, tal filho.\p"
 	.string "Meu marido gosta tanto de POKéMON\n"
 	.string "quanto nosso filho.\p"
-	.string "Se nao está no LABORATóRIO, deve estar\n"
+	.string "Se nao está no LABORATORIO, deve estar\n"
 	.string "explorando a grama alta.$"
 
 RivalsHouse_1F_Text_TooBusyToNoticeVisit:
@@ -387,7 +387,7 @@ RivalsHouse_1F_Text_BrendanWhoAreYou:
 	.string "Se mudou para a casa ao lado, certo?\p"
 	.string "Nao sabia que você era uma garota.\p"
 	.string "Meu pai, PROF. BIRCH, disse que o novo\n"
-	.string "vizinho era filho de um LIDER DE GINáSIO,\l"
+	.string "vizinho era filho de um LIDER DE GINASIO,\l"
 	.string "entao pensei que fosse um garoto.\p"
 	.string "Meu nome é BRENDAN.\n"
 	.string "Prazer, vizinho!\p"
