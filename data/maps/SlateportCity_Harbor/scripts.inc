@@ -483,12 +483,12 @@ SlateportCity_Harbor_Text_TeamAquaLeftNeedDive:
 SlateportCity_Harbor_Text_NeedDiveToCatchSub:
 	.string "CAP. STERN: Tentar alcancar um\n"
 	.string "submarino... E impossivel.\p"
-	.string "You would need a POKéMON that knows\n"
+	.string "Voce precisaria de um POKEMON que soubesse\n"
 	.string "how to DIVE…\p"
-	.string "Perhaps if you went out to\n"
-	.string "MOSSDEEP CITY…\p"
-	.string "A lot of divers live out there, so\n"
-	.string "someone might teach you…$"
+	.string "Talvez, se voce fosse ate\n"
+	.string "CIDADE DE MOSSDEEP...\p"
+	.string "Ha muitos mergulhadores por la, entao\n"
+	.string "talvez alguem possa ensinar voce...$"
 
 SlateportCity_Harbor_Text_WontBeLongBeforeWeFinishFerry:
 	.string "CAP. STERN: Ah, sim.\n"
@@ -525,16 +525,16 @@ SlateportCity_Harbor_Text_TradeForDeepSeaTooth:
 	.string "minha PRESA DO MAR?$"
 
 SlateportCity_Harbor_Text_TradeForDeepSeaScale:
-	.string "CAPT. STERN: So you'll trade it for\n"
-	.string "my DEEPSEASCALE?$"
+	.string "CAP. STERN: Entao voce vai troca-lo pela\n"
+	.string "minha ESCAMA DO MAR?$"
 
 SlateportCity_Harbor_Text_WhichOneDoYouWant:
-	.string "CAPT. STERN: Which one do you want?$"
+	.string "CAP. STERN: Qual deles voce quer?$"
 
 SlateportCity_Harbor_Text_HandedScannerToStern:
-	.string "{PLAYER} handed the SCANNER to\n"
-	.string "CAPT. STERN.$"
+	.string "{PLAYER} entregou o SCANNER ao\n"
+	.string "CAP. STERN.$"
 
 SlateportCity_Harbor_Text_ThisWillHelpResearch:
-	.string "CAPT. STERN: Thanks, {PLAYER}{KUN}!\n"
-	.string "This will help our research a lot!$"
+	.string "CAP. STERN: Obrigado, {PLAYER}{KUN}!\n"
+	.string "Isso vai ajudar muito em nossa pesquisa!$"
