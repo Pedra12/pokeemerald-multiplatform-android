@@ -275,7 +275,7 @@ PlayersHouse_2F_Text_ClockIsStopped:
 	.string "É melhor acertá-lo e ligá-lo!$"
 
 PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
-	.string "MäE: {PLAYER}, gostou do seu\n"
+	.string "MAE: {PLAYER}, gostou do seu\n"
 	.string "quarto novo?\p"
 	.string "Ótimo! Está tudo arrumado!\p"
 	.string "Também terminaram de colocar tudo\n"
@@ -290,11 +290,11 @@ PlayersHouse_2F_Text_Notebook:
 	.string "Abra o MENU com START.\p"
 	.string "REGRA DE AVENTURA 2\n"
 	.string "Registre seu progresso usando SALVAR.\p"
-	.string "As páginas restantes estäo em branco…$"
+	.string "As páginas restantes estao em branco…$"
 
 Common_Text_LookCloserAtMap:
 	.string "{PLAYER} observou melhor o mapa\n"
-	.string "da regiäo de HOENN.$"
+	.string "da regiao de HOENN.$"
 
 PlayersHouse_2F_Text_ItsAGameCube:
 	.string "É um Nintendo GameCube.\p"
