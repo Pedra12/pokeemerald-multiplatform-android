@@ -318,7 +318,7 @@ RustboroCity_DevonCorp_2F_Text_DevelopDeviceToResurrectFossils:
 
 RustboroCity_DevonCorp_2F_Text_WantToBringFossilBackToLife:
 	.string "Espere! Essa coisa que voce tem ai…\n"
-	.string "E um fossil de POKéMON?\p"
+	.string "E um fóssil de POKéMON?\p"
 	.string "Gostaria de trazer esse POKéMON\n"
 	.string "de volta a vida?\p"
 	.string "Posso fazer isso com meu novo\n"
@@ -355,7 +355,7 @@ RustboroCity_DevonCorp_2F_Text_FossilizedMonBroughtBackToLife:
 	.string "Obrigado por esperar!\p"
 	.string "Seu POKéMON fossilizado foi\n"
 	.string "trazido de volta a vida!\p"
-	.string "O fossil era um POKéMON antigo.\n"
+	.string "O fóssil era um POKéMON antigo.\n"
 	.string "Era um {STR_VAR_2}!$"
 
 RustboroCity_DevonCorp_2F_Text_ReceivedMonFromResearcher:
