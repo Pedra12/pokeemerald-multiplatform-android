@@ -315,9 +315,9 @@ PlayersHouse_1F_Text_MaybeDadWillBeOn:
 	.string "Talvez seu PAI esteja lá!$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim:
-	.string "MOM: Oh… It's over.\p"
-	.string "I think DAD was on, but we missed him.\n"
-	.string "Too bad.$"
+	.string "MäE: Ah… acabou.\p"
+	.string "Acho que seu PAI estava passando, mas perdemos.\n"
+	.string "Que pena.$"
 
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
 	.string "Ah, sim.\n"
@@ -351,10 +351,10 @@ PlayersHouse_1F_Text_DontPushYourselfTooHard:
 	.string "Agora vai lá, querido!$"
 
 PlayersHouse_1F_Text_IsThatAPokenav:
-	.string "MOM: What is that, honey? A POKéNAV?\n"
-	.string "Someone from DEVON gave it to you?\p"
-	.string "Well, honey, how about registering\n"
-	.string "your mom?\p"
+	.string "MäE: O que e isso, querido? Um POKéNAV?\n"
+	.string "Alguem da DEVON deu isso a voce?\p"
+	.string "Entao, querido, que tal registrar\n"
+	.string "sua mäe?\p"
 	.string "… … …$"
 
 PlayersHouse_1F_Text_RegisteredMom:
@@ -368,69 +368,69 @@ PlayersHouse_1F_Text_Vigoroth2:
 	.string "Huggoh, uggo uggo…$"
 
 PlayersHouse_1F_Text_ReportFromPetalburgGym:
-	.string "INTERVIEWER: …We brought you this\n"
-	.string "report from in front of PETALBURG GYM.$"
+	.string "REPÓRTER: …Trazemos esta reportagem\n"
+	.string "diretamente da frente do GINASIO DE PETALBURG.$"
 
 PlayersHouse_1F_Text_TheresAMovieOnTV:
-	.string "There is a movie on TV.\p"
-	.string "Two men are dancing on a big piano\n"
-	.string "keyboard.\p"
-	.string "Better get going!$"
+	.string "Esta passando um filme na TV.\p"
+	.string "Dois homens estao dancando em um enorme\n"
+	.string "teclado de piano.\p"
+	.string "Melhor ir andando!$"
 
 PlayersHouse_1F_Text_RunningShoesManual:
-	.string "It's the instruction booklet for the\n"
-	.string "RUNNING SHOES.\p"
-	.string "“Press the B Button to run while\n"
-	.string "wearing your RUNNING SHOES.\p"
-	.string "“Lace up your RUNNING SHOES and hit\n"
-	.string "the road running!”$"
+	.string "E o manual de instrucoes dos\n"
+	.string "TENIS DE CORRIDA.\p"
+	.string "“Aperte o botao B para correr enquanto\n"
+	.string "wearing your TENIS DE CORRIDA.\p"
+	.string "“Amarre seus TENIS DE CORRIDA e\n"
+	.string "saia correndo por ai!”$"
 
 PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
-	.string "DAD: Hm?\p"
-	.string "Hey, it's {PLAYER}!\p"
-	.string "It's been a while since I saw you,\n"
-	.string "but you look…stronger, somehow.\p"
-	.string "That's the impression I get.\n"
-	.string "But your old man hasn't given up yet!\p"
-	.string "Oh, yes, I have something for you.\n"
-	.string "This came to you from someone named\l"
-	.string "MR. BRINEY.$"
+	.string "PAI: Hm?\p"
+	.string "Ei, e o {PLAYER}!\p"
+	.string "Faz tempo que nao vejo voce,\n"
+	.string "mas voce parece… mais forte.\p"
+	.string "Essa e a impressao que tenho.\n"
+	.string "Mas seu velho ainda nao desistiu!\p"
+	.string "Ah, sim, tenho algo para voce.\n"
+	.string "Isto chegou para voce, enviado por alguem\l"
+	.string "chamado SR. BRINEY.$"
 
 PlayersHouse_1F_Text_PortsInSlateportLilycove:
-	.string "DAD: Hm, a TICKET for a ferry?\p"
-	.string "If I recall, there are ferry ports in\n"
-	.string "SLATEPORT and LILYCOVE.$"
+	.string "PAI: Hm, uma PASSAGEM de balsa?\p"
+	.string "Se me lembro bem, ha portos de balsa em\n"
+	.string "SLATEPORT e LILYCOVE.$"
 
 PlayersHouse_1F_Text_BetterGetBackToGym:
-	.string "I'd better get back to PETALBURG GYM.\p"
-	.string "MOM, thanks for looking after the house\n"
-	.string "while I'm away.$"
+	.string "E melhor eu voltar ao GINASIO DE PETALBURG.\p"
+	.string "MäE, obrigado por cuidar da casa\n"
+	.string "enquanto estou fora.$"
 
 PlayersHouse_1F_Text_DadShouldStayLonger:
-	.string "MOM: That DAD of yours…\p"
-	.string "He comes home for the first time in a\n"
-	.string "while, but all he talks about is POKéMON.\p"
-	.string "He should relax and stay a little longer.$"
+	.string "MäE: Esse seu PAI…\p"
+	.string "Ele volta para casa pela primeira vez em\n"
+	.string "um bom tempo, mas so fala de POKéMON.\p"
+	.string "Ele devia descansar e ficar mais um pouco.$"
 
 PlayersHouse_1F_Text_IsThatABreakingStory:
-	.string "MOM: Is that a breaking news story?$"
+	.string "MäE: Isso e uma noticia urgente?$"
 
 PlayersHouse_1F_Text_LatiEmergencyNewsFlash:
-	.string "We bring you this emergency\n"
-	.string "news flash!\p"
-	.string "In various HOENN locales, there have\n"
-	.string "been reports of a BZZT…colored\l"
-	.string "POKéMON in flight.\p"
-	.string "The identity of this POKéMON is\n"
-	.string "currently unknown.\p"
-	.string "We now return you to the regular\n"
-	.string "movie program.$"
+	.string "Interrompemos a programacao para\n"
+	.string "uma noticia urgente!\p"
+	.string "Em varias regioes de HOENN, foram\n"
+	.string "relatados avistamentos de um POKéMON\l"
+	.string "voador de cor BZZT…\p"
+	.string "A identidade desse POKéMON ainda\n"
+	.string "e desconhecida.\p"
+	.string "Voltamos agora a\n"
+	.string "programacao normal.$"
 
 PlayersHouse_1F_Text_WhatColorDidTheySay:
-	.string "MOM: {PLAYER}, did you catch that?\p"
-	.string "What color did the announcer say\n"
-	.string "that POKéMON was?$"
+	.string "MäE: {PLAYER}, voce ouviu isso?\p"
+	.string "Que cor o apresentador disse\n"
+	.string "que era aquele POKéMON?$"
 
 PlayersHouse_1F_Text_StillUnknownPokemon:
-	.string "MOM: Well, isn't that something!\n"
-	.string "There are still unknown POKéMON.$"
+	.string "MäE: Mas que coisa interessante!\n"
+	.string "Ainda existem POKéMON desconhecidos.$"
