@@ -321,12 +321,12 @@ Route103_Text_BrendanLetsBattle:
 	.string "Ei, é você, {PLAYER}!\p"
 	.string "…Ah, é mesmo, meu pai deu um POKÉMON a você.\p"
 	.string "Já que estamos aqui, que tal uma\n"
-	.string "battle?\p"
+	.string "batalha?\p"
 	.string "Vou ensinar a você o que significa ser\n"
 	.string "um TREINADOR!$"
 
 Route103_Text_BrendanDefeated:
-	.string "Ora, {PLAYER}, você não é nada mau.$"
+	.string "Ora, {PLAYER}, você nao é nada mau.$"
 
 Route103_Text_BrendanTimeToHeadBack:
 	.string "BRENDAN: Acho que entendi.\n"
@@ -336,7 +336,7 @@ Route103_Text_BrendanTimeToHeadBack:
 	.string "mesmo tendo acabado de recebê-lo.\p"
 	.string "{PLAYER}, tenho a impressão de que você\n"
 	.string "consegue fazer amizade com qualquer POKÉMON.\p"
-	.string "We should head back to o LABORATÓRIO.$"
+	.string "Devemos voltar ao LABORATÓRIO.$"
 
 Route103_Text_ShouldHaveBroughtPotion:
 	.string "Meu POKÉMON está exausto…\n"
