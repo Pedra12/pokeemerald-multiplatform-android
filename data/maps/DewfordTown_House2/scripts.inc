@@ -27,31 +27,31 @@ DewfordTown_House2_EventScript_Boy::
 	end
 
 DewfordTown_House2_Text_WantYouToHaveSilkScarf:
-	.string "Gorge your eyes on this!\p"
-	.string "It's a SILK SCARF. It's right at the\n"
-	.string "cutting edge of fashion, yeah!\p"
-	.string "Oh, I can see your eyes twinkling!\n"
-	.string "You appreciate my dazzling style!\p"
-	.string "Oh, you're a delight!\n"
-	.string "Here you go. I want you to have it!$"
+	.string "Admire isto com seus proprios olhos!\p"
+	.string "E um LENCO DE SEDA. Esta no\n"
+	.string "auge da moda, pode apostar!\p"
+	.string "Ah, vejo seus olhos brilhando!\n"
+	.string "Voce aprecia meu estilo deslumbrante!\p"
+	.string "Ah, que pessoa encantadora!\n"
+	.string "Tome. Quero que fique com ele!$"
 
 DewfordTown_House2_Text_NoRoom:
-	.string "Oh, you don't have room?\p"
-	.string "Now, listen tight, this SCARF is a must-\n"
-	.string "have! Why, I would sell all my items\l"
-	.string "in order to get it!$"
+	.string "Ah, voce nao tem espaco?\p"
+	.string "Escute bem: este LENCO e indispensavel.\n"
+	.string "Eu venderia todos os meus itens\l"
+	.string "para conseguir um!$"
 
 DewfordTown_House2_Text_ExplainSilkScarf:
-	.string "The SILK SCARF raises the power of\n"
-	.string "NORMAL-type moves.\p"
-	.string "It's a marvelous SCARF that will go\n"
-	.string "with almost all POKéMON!$"
+	.string "O LENCO DE SEDA aumenta o poder dos\n"
+	.string "golpes do tipo NORMAL.\p"
+	.string "E um LENCO maravilhoso que combina\n"
+	.string "com quase todos os POKéMON!$"
 
 DewfordTown_House2_Text_BrawlySoCool:
-	.string "Wow, you bothered to cross the sea\n"
-	.string "to visit DEWFORD?\p"
-	.string "Did you maybe come here because you\n"
-	.string "heard about BRAWLY?\p"
-	.string "He's so cool…\n"
-	.string "Everyone idolizes him.$"
+	.string "Nossa, voce atravessou o mar\n"
+	.string "para visitar DEWFORD?\p"
+	.string "Sera que veio ate aqui porque\n"
+	.string "ouviu falar de BRAWLY?\p"
+	.string "Ele e demais…\n"
+	.string "Todo mundo o admira.$"
 

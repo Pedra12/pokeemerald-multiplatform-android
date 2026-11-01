@@ -19,28 +19,28 @@ MauvilleCity_House1_EventScript_ReceivedRockSmash::
 	end
 
 MauvilleCity_House1_Text_ImRockSmashDudeTakeThis:
-	.string "Woohoo!\p"
-	.string "I hear people call me the ROCK SMASH\n"
-	.string "GUY, but I find that sort of degrading.\p"
-	.string "I think I deserve a bit more respect,\n"
-	.string "like maybe the ROCK SMASH DUDE.\p"
-	.string "Woohoo!\p"
-	.string "Anyways, your POKéMON look pretty\n"
-	.string "strong.\p"
-	.string "I like that!\n"
-	.string "Here, take this HIDDEN MACHINE!$"
+	.string "Uhuu!\p"
+	.string "Ouço as pessoas me chamarem de QUEBRA-ROCHA\n"
+	.string "mas acho esse apelido meio ofensivo.\p"
+	.string "Acho que mereço um pouco mais de respeito,\n"
+	.string "talvez QUEBRA-ROCHA, O CARA.\p"
+	.string "Uhuu!\p"
+	.string "De qualquer forma, seus POKéMON parecem\n"
+	.string "bem fortes.\p"
+	.string "Gostei disso!\n"
+	.string "Aqui, pegue esta MÁQUINA OCULTA!$"
 
 MauvilleCity_House1_Text_ExplainRockSmash:
-	.string "That HM contains ROCK SMASH.\p"
-	.string "If you come across large boulders\n"
-	.string "that block your path…\p"
-	.string "Well, use that HM move and smash\n"
-	.string "them right out of your way!\p"
-	.string "Yes, sir! Smash rocks aside, I say!\n"
-	.string "Woohoo!$"
+	.string "Essa MO contém QUEBRA-ROCHA.\p"
+	.string "Se encontrar grandes pedras\n"
+	.string "bloqueando seu caminho…\p"
+	.string "Use esse golpe da MO e quebre\n"
+	.string "as pedras para liberar a passagem!\p"
+	.string "Isso mesmo! Quebre as pedras, eu digo!\n"
+	.string "Uhuu!$"
 
 MauvilleCity_House1_Text_MonCanFlyOutOfSmashedRock:
-	.string "Oh, yes, if you smash a rock, a POKéMON\n"
-	.string "could come flying out of hiding.\p"
-	.string "Woohoo!$"
+	.string "Ah, sim, se quebrar uma pedra, um POKéMON\n"
+	.string "pode sair voando de seu esconderijo.\p"
+	.string "Uhuu!$"
 
