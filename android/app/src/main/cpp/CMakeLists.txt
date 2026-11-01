@@ -94,15 +94,15 @@ for obj in sys.argv[1:]:
         print("\n".join(line for line in symbols.splitlines() if "SPECIAL_" in line))
 if not found:
     print("No SPECIAL_* relocations in individual game objects.")
-]=] \${MAKE_ASM_OBJECTS}
-    WORKING_DIRECTORY "\${ROOT}"
+]=] ${MAKE_ASM_OBJECTS}
+    WORKING_DIRECTORY "${ROOT}"
     RESULT_VARIABLE SPECIAL_RELOC_SCAN_RESULT
     OUTPUT_VARIABLE SPECIAL_RELOC_REPORT
     ERROR_VARIABLE SPECIAL_RELOC_SCAN_ERROR)
 if(NOT SPECIAL_RELOC_SCAN_RESULT EQUAL 0)
-    message(FATAL_ERROR "Could not inspect game object relocations: \${SPECIAL_RELOC_SCAN_ERROR}")
+    message(FATAL_ERROR "Could not inspect game object relocations: ${SPECIAL_RELOC_SCAN_ERROR}")
 endif()
-message(STATUS "Game special-index relocation diagnosis:\n\${SPECIAL_RELOC_REPORT}")
+message(STATUS "Game special-index relocation diagnosis:\n${SPECIAL_RELOC_REPORT}")
 
 # Match the upstream Android port: merge game assembly objects and move
 # read-only data into a writable section so Android can apply ARM relocations.
