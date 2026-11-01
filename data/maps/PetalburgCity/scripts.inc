@@ -721,7 +721,7 @@ PetalburgCity_Text_ThisIsGymSign:
 PetalburgCity_Text_WaterReflection:
 	.string "Meu rosto está refletido na água.\p"
 	.string "É um sorriso brilhante e cheio de esperança…\p"
-	.string "Ou talvez seja uma expressão de silêncio sombrio\n"
+	.string "Ou talvez seja uma expressao de silêncio sombrio\n"
 	.string "lutando contra o medo…\p"
 	.string "O que você vê refletido em seu rosto?$"
 
@@ -750,8 +750,8 @@ PetalburgCity_Text_AreYouATrainer:
 
 PetalburgCity_Text_WellMaybeNot:
 	.string "… … … … … …\p"
-	.string "Bem, talvez não.\n"
-	.string "Suas roupas não estão tão sujas.\p"
+	.string "Bem, talvez nao.\n"
+	.string "Suas roupas nao estao tao sujas.\p"
 	.string "Ou você é um TREINADOR iniciante,\n"
 	.string "ou talvez seja apenas uma criança comum.$"
 
