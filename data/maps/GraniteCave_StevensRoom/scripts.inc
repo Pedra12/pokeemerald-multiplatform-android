@@ -93,7 +93,7 @@ GraniteCave_StevensRoom_Text_ThankYouTakeThis:
 	.string "Deixe-me ver…\n"
 	.string "Vou lhe dar esta MT.\p"
 	.string "Ela contem meu golpe favorito,\n"
-	.string "ASA DE ACO.$"
+	.string "ASA DE AÇO.$"
 
 GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister:
 	.string "STEVEN: Seus POKéMON parecem muito\n"
