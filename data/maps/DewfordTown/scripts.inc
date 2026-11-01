@@ -750,13 +750,13 @@ DewfordTown_Text_XIsTheBiggestHappeningThingRight:
 	.string "e a maior tendencia, nao e?$"
 
 DewfordTown_Text_TellMeWhatsNewAndIn:
-	.string "Hã?\n"
+	.string "Ha?\n"
 	.string "Isso nao esta mais na moda?\p"
 	.string "Entao, voce precisa me contar\n"
 	.string "o que e novidade e o que esta na moda!$"
 
 DewfordTown_Text_OfCourseIKnowAboutThat:
-	.string "Hã?\n"
+	.string "Ha?\n"
 	.string "“{STR_VAR_2}”?\p"
 	.string "… …\p"
 	.string "…Uh… Yeah! Isso mesmo!\n"
