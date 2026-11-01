@@ -41,7 +41,7 @@ jobs:
           import subprocess
 
           roots = ["src", "gflib", "data", "asm", "include", "sound"]
-          pattern = re.compile(r'INCBIN_[A-Za-z0-9_]+\\s*\\(\\s*"([^"]+)"|\\.incbin\\s+"([^"]+)"')
+          pattern = re.compile(r'INCBIN_[A-Za-z0-9_]+\s*\\(\s*"([^"]+)"|\\.incbin\s+"([^"]+)"')
           assets = set()
           for root in roots:
               base = pathlib.Path(root)
@@ -68,7 +68,7 @@ jobs:
           missing = [asset for asset in targets if not pathlib.Path(asset).is_file()]
           if missing:
               print("Recursos ainda ausentes:")
-              print("\\n".join(missing[:100]))
+              print("\n".join(missing[:100]))
               raise SystemExit(f"{len(missing)} recursos continuam ausentes.")
           print("Todos os recursos referenciados foram encontrados ou gerados.")
           PY
