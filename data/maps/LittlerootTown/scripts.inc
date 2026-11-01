@@ -905,7 +905,7 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	return
 
 LittlerootTown_Text_OurNewHomeLetsGoInside:
-	.string "MaE: {PLAYER}, chegamos, querido!\p"
+	.string "MAE: {PLAYER}, chegamos, querido!\p"
 	.string "A viagem com as nossas coisas no\n"
 	.string "caminhao deve ter sido cansativa.\p"
 	.string "Bem, essa é a vila de LITTLEROOT.\p"
@@ -917,10 +917,10 @@ LittlerootTown_Text_OurNewHomeLetsGoInside:
 	.string "Vamos pra dentro.$"
 
 LittlerootTown_Text_WaitPlayer:
-	.string "MaE: Espera, {PLAYER}!$"
+	.string "MAE: Espera, {PLAYER}!$"
 
 LittlerootTown_Text_WearTheseRunningShoes:
-	.string "MaE: {PLAYER}! {PLAYER}! Você\n"
+	.string "MAE: {PLAYER}! {PLAYER}! Você\n"
 	.string "se introduziu pro PROF. BIRCH?\p"
 	.string "Ah! Que POKéMON adorável!\n"
 	.string "Você pegou ele com o PROF. BIRCH. Que bom!\p"
@@ -935,7 +935,7 @@ LittlerootTown_Text_SwitchShoesWithRunningShoes:
 	.string "TêNIS DE CORRIDA.$"
 
 LittlerootTown_Text_ExplainRunningShoes:
-	.string "MaE: {PLAYER}, esses tenis vieram com\n"
+	.string "MAE: {PLAYER}, esses tenis vieram com\n"
 	.string "instrucoes.\p"
 	.string "“Aperte o botao B usando estes\n"
 	.string "TENIS DE CORRIDA para correr mais rapido!\p"
@@ -995,7 +995,7 @@ LittlerootTown_Text_TownSign:
 	.string "“Uma vila que nao pode ser tingida de nenhuma cor.”$"
 
 LittlerootTown_Text_ProfBirchsLab:
-	.string "LABORATóRIO POKéMON do PROF. BIRCH$"
+	.string "LABORATORIO POKéMON do PROF. BIRCH$"
 
 LittlerootTown_Text_PlayersHouse:
 	.string "CASA DE {PLAYER}$"
