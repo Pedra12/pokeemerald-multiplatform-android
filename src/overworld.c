@@ -1,11 +1,4 @@
 #include "global.h"
-#include "platform.h"
-
-#ifdef PLATFORM_SDL2
-#define DEBUG_CHECKPOINT(message) Platform_DebugCheckpoint(message)
-#else
-#define DEBUG_CHECKPOINT(message) ((void)0)
-#endif
 #include "platform/mods/mod_manager.h"
 #include "overworld.h"
 #include "battle_pyramid.h"
@@ -846,73 +839,49 @@ static void LoadMapFromWarp(bool32 a1)
     bool8 isOutdoors;
     bool8 isIndoors;
 
-    DEBUG_CHECKPOINT("LoadMapFromWarp: before LoadCurrentMapData");
     LoadCurrentMapData();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after LoadCurrentMapData");
     if (!(sObjectEventLoadFlag & SKIP_OBJECT_EVENT_LOAD))
     {
-        DEBUG_CHECKPOINT("LoadMapFromWarp: before object event templates");
         if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
             LoadBattlePyramidObjectEventTemplates();
         else if (InTrainerHill())
             LoadTrainerHillObjectEventTemplates();
         else
             LoadObjEventTemplatesFromHeader();
-        DEBUG_CHECKPOINT("LoadMapFromWarp: after object event templates");
     }
 
-    DEBUG_CHECKPOINT("LoadMapFromWarp: before map type checks");
     isOutdoors = IsMapTypeOutdoors(gMapHeader.mapType);
     isIndoors = IsMapTypeIndoors(gMapHeader.mapType);
 
-    DEBUG_CHECKPOINT("LoadMapFromWarp: before CheckLeftFriendsSecretBase");
     CheckLeftFriendsSecretBase();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after CheckLeftFriendsSecretBase");
     TrySetMapSaveWarpStatus();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after TrySetMapSaveWarpStatus");
     ClearTempFieldEventData();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after ClearTempFieldEventData");
     ResetCyclingRoadChallengeData();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after ResetCyclingRoadChallengeData");
     RestartWildEncounterImmunitySteps();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after RestartWildEncounterImmunitySteps");
     TryUpdateRandomTrainerRematches(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after TryUpdateRandomTrainerRematches");
     if (a1 != TRUE)
         DoTimeBasedEvents();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after time-based events");
     SetSavedWeatherFromCurrMapHeader();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after SetSavedWeatherFromCurrMapHeader");
     ChooseAmbientCrySpecies();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after ChooseAmbientCrySpecies");
     if (isOutdoors)
         FlagClear(FLAG_SYS_USE_FLASH);
     SetDefaultFlashLevel();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after SetDefaultFlashLevel");
     Overworld_ClearSavedMusic();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after Overworld_ClearSavedMusic");
     RunOnTransitionMapScript();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after RunOnTransitionMapScript");
     UpdateLocationHistoryForRoamer();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after UpdateLocationHistoryForRoamer");
     RoamerMoveToOtherLocationSet();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after RoamerMoveToOtherLocationSet");
     if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
         InitBattlePyramidMap(FALSE);
     else if (InTrainerHill())
         InitTrainerHillMap();
     else
         InitMap();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after map-specific initialization");
 
     if (a1 != TRUE && isIndoors)
     {
         UpdateTVScreensOnMap(gBackupMapLayout.width, gBackupMapLayout.height);
-        DEBUG_CHECKPOINT("LoadMapFromWarp: after UpdateTVScreensOnMap");
         InitSecretBaseAppearance(TRUE);
-        DEBUG_CHECKPOINT("LoadMapFromWarp: after InitSecretBaseAppearance");
     }
-    DEBUG_CHECKPOINT("LoadMapFromWarp: completed");
 }
 
 void ResetInitialPlayerAvatarState(void)
@@ -1572,26 +1541,20 @@ static bool8 RunFieldCallback(void)
 
 void CB2_NewGame(void)
 {
-    DEBUG_CHECKPOINT("CB2_NewGame entered");
     FieldClearVBlankHBlankCallbacks();
     StopMapMusic();
     ResetSafariZoneFlag_();
-    DEBUG_CHECKPOINT("CB2_NewGame before NewGameInitData");
     NewGameInitData();
-    DEBUG_CHECKPOINT("CB2_NewGame after NewGameInitData");
     ResetInitialPlayerAvatarState();
     PlayTimeCounter_Start();
     ScriptContext_Init();
     UnlockPlayerFieldControls();
     gFieldCallback = ExecuteTruckSequence;
     gFieldCallback2 = NULL;
-    DEBUG_CHECKPOINT("CB2_NewGame before DoMapLoadLoop");
     DoMapLoadLoop(&gMain.state);
-    DEBUG_CHECKPOINT("CB2_NewGame after DoMapLoadLoop");
     SetFieldVBlankCallback();
     SetMainCallback1(CB1_Overworld);
     SetMainCallback2(CB2_Overworld);
-    DEBUG_CHECKPOINT("CB2_NewGame completed map initialization");
 }
 
 void CB2_WhiteOut(void)
@@ -1874,10 +1837,8 @@ static bool32 LoadMapInStepsLink(u8 *state)
         InitOverworldBgs();
         ScriptContext_Init();
         UnlockPlayerFieldControls();
-        DEBUG_CHECKPOINT("Map load state 1: before save heap and screen reset");
         ResetMirageTowerAndSaveBlockPtrs();
         ResetScreenForMapLoad();
-        DEBUG_CHECKPOINT("Map load state 1: completed");
         (*state)++;
         break;
     case 1:
@@ -1896,50 +1857,36 @@ static bool32 LoadMapInStepsLink(u8 *state)
         (*state)++;
         break;
     case 4:
-        DEBUG_CHECKPOINT("Map load state 4: before graphics initialization");
         InitCurrentFlashLevelScanlineEffect();
         InitOverworldGraphicsRegisters();
         InitTextBoxGfxAndPrinters();
-        DEBUG_CHECKPOINT("Map load state 4: after graphics initialization");
         (*state)++;
         break;
     case 5:
-        DEBUG_CHECKPOINT("Map load state 5: before ResetFieldCamera");
         ResetFieldCamera();
-        DEBUG_CHECKPOINT("Map load state 5: after ResetFieldCamera");
         (*state)++;
         break;
     case 6:
-        DEBUG_CHECKPOINT("Map load state 6: before primary tileset copy");
         CopyPrimaryTilesetToVram(gMapHeader.mapLayout);
-        DEBUG_CHECKPOINT("Map load state 6: after primary tileset copy");
         (*state)++;
         break;
     case 7:
-        DEBUG_CHECKPOINT("Map load state 7: before secondary tileset copy");
         CopySecondaryTilesetToVram(gMapHeader.mapLayout);
-        DEBUG_CHECKPOINT("Map load state 7: after secondary tileset copy");
         (*state)++;
         break;
     case 8:
         if (FreeTempTileDataBuffersIfPossible() != TRUE)
         {
-            DEBUG_CHECKPOINT("Map load state 8: before tileset palettes");
             LoadMapTilesetPalettes(gMapHeader.mapLayout);
-            DEBUG_CHECKPOINT("Map load state 8: after tileset palettes");
             (*state)++;
         }
         break;
     case 9:
-        DEBUG_CHECKPOINT("Map load state 9: before DrawWholeMapView");
         DrawWholeMapView();
-        DEBUG_CHECKPOINT("Map load state 9: after DrawWholeMapView");
         (*state)++;
         break;
     case 10:
-        DEBUG_CHECKPOINT("Map load state 10: before InitTilesetAnimations");
         InitTilesetAnimations();
-        DEBUG_CHECKPOINT("Map load state 10: after InitTilesetAnimations");
         (*state)++;
         break;
     case 11:
@@ -1951,10 +1898,8 @@ static bool32 LoadMapInStepsLink(u8 *state)
         (*state)++;
         break;
     case 12:
-        DEBUG_CHECKPOINT("Map load state 12: before RunFieldCallback");
         if (RunFieldCallback())
             (*state)++;
-        DEBUG_CHECKPOINT("Map load state 12: after RunFieldCallback");
         break;
     case 13:
         return TRUE;
@@ -1969,9 +1914,7 @@ static bool32 LoadMapInStepsLocal(u8 *state, bool32 a2)
     {
     case 0:
         FieldClearVBlankHBlankCallbacks();
-        DEBUG_CHECKPOINT("Map load state 0: before LoadMapFromWarp");
         LoadMapFromWarp(a2);
-        DEBUG_CHECKPOINT("Map load state 0: after LoadMapFromWarp");
         (*state)++;
         break;
     case 1:
@@ -1980,17 +1923,12 @@ static bool32 LoadMapInStepsLocal(u8 *state, bool32 a2)
         (*state)++;
         break;
     case 2:
-        DEBUG_CHECKPOINT("Map load state 2: before ResumeMap");
         ResumeMap(a2);
-        DEBUG_CHECKPOINT("Map load state 2: after ResumeMap");
         (*state)++;
         break;
     case 3:
-        DEBUG_CHECKPOINT("Map load state 3: before InitObjectEventsLocal");
         InitObjectEventsLocal();
-        DEBUG_CHECKPOINT("Map load state 3: after InitObjectEventsLocal");
         SetCameraToTrackPlayer();
-        DEBUG_CHECKPOINT("Map load state 3: after SetCameraToTrackPlayer");
         (*state)++;
         break;
     case 4:
@@ -2027,10 +1965,8 @@ static bool32 LoadMapInStepsLocal(u8 *state, bool32 a2)
         (*state)++;
         break;
     case 11:
-        DEBUG_CHECKPOINT("Map load state 11: before map name popup");
         if (gMapHeader.showMapName == TRUE && SecretBaseMapPopupEnabled() == TRUE)
             ShowMapNamePopup();
-        DEBUG_CHECKPOINT("Map load state 11: after map name popup");
         (*state)++;
         break;
     case 12:
