@@ -385,7 +385,7 @@ RivalsHouse_1F_Text_BrendanWhoAreYou:
 	.string "Quem é você?\p"
 	.string "Ah, você é {PLAYER}, nao é?\n"
 	.string "Se mudou para a casa ao lado, certo?\p"
-	.string "Näo sabia que você era uma garota.\p"
+	.string "Nao sabia que você era uma garota.\p"
 	.string "Meu pai, PROF. BIRCH, disse que o novo\n"
 	.string "vizinho era filho de um LIDER DE GINáSIO,\l"
 	.string "entao pensei que fosse um garoto.\p"
