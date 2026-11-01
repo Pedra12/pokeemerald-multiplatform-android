@@ -1,5 +1,5 @@
 .macro def_special ptr
-@ These are bytecode indices local to event_scripts.s, not exported symbols.
+.global SPECIAL_\ptr
 .set SPECIAL_\ptr, __special__
 .set __special__, __special__ + 1
 	.int \ptr
