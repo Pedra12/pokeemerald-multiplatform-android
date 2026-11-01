@@ -358,8 +358,8 @@ PlayersHouse_1F_Text_IsThatAPokenav:
 	.string "… … …$"
 
 PlayersHouse_1F_Text_RegisteredMom:
-	.string "Registered MOM\n"
-	.string "in the POKéNAV.$"
+	.string "MäE registrada\n"
+	.string "no POKéNAV.$"
 
 PlayersHouse_1F_Text_Vigoroth1:
 	.string "Fugiiiiih!$"
@@ -381,7 +381,7 @@ PlayersHouse_1F_Text_RunningShoesManual:
 	.string "E o manual de instrucoes dos\n"
 	.string "TENIS DE CORRIDA.\p"
 	.string "“Aperte o botao B para correr enquanto\n"
-	.string "wearing your TENIS DE CORRIDA.\p"
+	.string "estiver usando seus TENIS DE CORRIDA.\p"
 	.string "“Amarre seus TENIS DE CORRIDA e\n"
 	.string "saia correndo por ai!”$"
 
