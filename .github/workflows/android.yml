@@ -32,6 +32,47 @@ jobs:
           make tools
           make generated
 
+      - name: Generate all game assets required by native sources
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib
+          import re
+          import subprocess
+
+          roots = ["src", "gflib", "data", "asm", "include", "sound"]
+          pattern = re.compile(r'INCBIN_[A-Za-z0-9_]+\\s*\\(\\s*"([^"]+)"|\\.incbin\\s+"([^"]+)"')
+          assets = set()
+          for root in roots:
+              base = pathlib.Path(root)
+              if not base.exists():
+                  continue
+              for path in base.rglob("*"):
+                  if path.is_file() and path.suffix in {".c", ".h", ".inc", ".s"}:
+                      try:
+                          source = path.read_text(encoding="utf-8")
+                      except UnicodeDecodeError:
+                          continue
+                      for match in pattern.finditer(source):
+                          asset = match.group(1) or match.group(2)
+                          if asset and not asset.startswith("/"):
+                              assets.add(asset)
+
+          if not assets:
+              raise SystemExit("Nenhuma referência INCBIN foi encontrada; interrompendo para evitar APK incompleto.")
+
+          targets = sorted(assets)
+          print(f"Gerando/verificando {len(targets)} arquivos de recursos do jogo.")
+          subprocess.run(["make", "-j2", "NODEP=1", "SETUP_PREREQS=0", *targets], check=True)
+
+          missing = [asset for asset in targets if not pathlib.Path(asset).is_file()]
+          if missing:
+              print("Recursos ainda ausentes:")
+              print("\\n".join(missing[:100]))
+              raise SystemExit(f"{len(missing)} recursos continuam ausentes.")
+          print("Todos os recursos referenciados foram encontrados ou gerados.")
+          PY
+
       - name: Locate Android SDK command-line tools
         shell: bash
         run: |
