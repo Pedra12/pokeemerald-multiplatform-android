@@ -20,7 +20,7 @@ gText_Birch_MainSpeech::
 	.string "E, às vezes, nos unimos e\n"
 	.string "batalhamos com outros como nós.\p"
 	.string "Mas, apesar da nossa proximidade,\n"
-	.string "näo sabemos tudo sobre os POKéMON.\p"
+	.string "nao sabemos tudo sobre os POKéMON.\p"
 	.string "Na verdade, há muitos, muitos\n"
 	.string "mistérios em torno dos POKéMON.\p"
 	.string "Para desvendar os segredos dos\n"
@@ -40,7 +40,7 @@ gText_Birch_WhatsYourName::
 	.string "Qual é o seu nome?$"
 
 gText_Birch_SoItsPlayer::
-	.string "Entäo é {PLAYER}{KUN}?$"
+	.string "Entao é {PLAYER}{KUN}?$"
 
 gText_Birch_YourePlayer::
 	.string "Ah, entendi!\p"
@@ -57,5 +57,5 @@ gText_Birch_AreYouReady::
 	.string "mundo dos POKéMON, onde sonhos,\l"
 	.string "aventura e amizades o aguardam!\p"
 	.string "Bem, estarei esperando por você depois.\n"
-	.string "Venha me ver no meu LABORATóRIO.\p"
+	.string "Venha me ver no meu LABORATORIO.\p"
 	.string "$"
