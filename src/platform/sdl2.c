@@ -614,24 +614,31 @@ void Platform_StoreSaveFile(void)
 
 void Platform_ReadFlash(u16 sectorNum, u32 offset, u8 *dest, u32 size)
 {
-    DBGPRINTF("ReadFlash(sectorNum=0x%04X,offset=0x%08X,size=0x%02X)\n",sectorNum,offset,size);
-    FILE * savefile = fopen(sSavePath, "r+b");
-    if (savefile == NULL)
+    u64 flashOffset;
+
+    if (dest == NULL)
+        return;
+
+    // A newly created save file is empty. Unwritten flash bytes must read as 0xFF,
+    // not leave the caller's buffer uninitialized.
+    memset(dest, 0xFF, size);
+
+    if (gFlash == NULL)
     {
-        puts("Error opening save file.");
+        SDL_Log("Platform_ReadFlash: flash device is not initialized");
         return;
     }
-    if (fseek(savefile, (sectorNum << gFlash->sector.shift) + offset, SEEK_SET))
-    {
-        fclose(savefile);
+
+    flashOffset = ((u64)sectorNum << gFlash->sector.shift) + offset;
+    if (flashOffset >= sizeof(FLASH_BASE))
         return;
-    }
-    if (fread(dest, 1, size, savefile) != size)
-    {
-        fclose(savefile);
-        return;
-    }
-    fclose(savefile);
+
+    if (size > sizeof(FLASH_BASE) - flashOffset)
+        size = sizeof(FLASH_BASE) - flashOffset;
+
+    // Read from the in-memory flash image loaded at startup. Reopening the save
+    // file here can return stale or short data while the game is running.
+    memcpy(dest, FLASH_BASE + flashOffset, size);
 }
 
 void Platform_QueueAudio(float *audioBuffer, s32 samplesPerFrame)
