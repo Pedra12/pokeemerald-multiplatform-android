@@ -71,10 +71,27 @@ foreach(OBJECT IN LISTS MAKE_ASM_OBJECTS)
         message(FATAL_ERROR "Expected game object was not generated: ${OBJECT}")
     endif()
 endforeach()
-set_source_files_properties(${MAKE_ASM_OBJECTS}
+# Match the upstream Android port: merge game assembly objects and move
+# read-only data into a writable section so Android can apply ARM relocations.
+find_program(ARM_NONE_EABI_LD arm-none-eabi-ld
+    HINTS "$ENV{ARM_NONE_EABI_TOOLCHAIN}/bin"
+    REQUIRED)
+find_program(ARM_NONE_EABI_OBJCOPY arm-none-eabi-objcopy
+    HINTS "$ENV{ARM_NONE_EABI_TOOLCHAIN}/bin"
+    REQUIRED)
+
+set(GAME_DATA_OBJECT "${CMAKE_BINARY_DIR}/generated/game_data.o")
+add_custom_command(
+    OUTPUT "${GAME_DATA_OBJECT}"
+    COMMAND "${CMAKE_COMMAND}" -E make_directory "${CMAKE_BINARY_DIR}/generated"
+    COMMAND "${ARM_NONE_EABI_LD}" -r -o "${GAME_DATA_OBJECT}.tmp" ${MAKE_ASM_OBJECTS}
+    COMMAND "${ARM_NONE_EABI_OBJCOPY}" --rename-section .rodata=.data,alloc,load,data,contents "${GAME_DATA_OBJECT}.tmp" "${GAME_DATA_OBJECT}"
+    DEPENDS ${MAKE_ASM_OBJECTS}
+    VERBATIM)
+set_source_files_properties("${GAME_DATA_OBJECT}"
     PROPERTIES GENERATED TRUE EXTERNAL_OBJECT TRUE)
 
-add_library(main SHARED ${GENERATED_C} ${MAKE_ASM_OBJECTS})
+add_library(main SHARED ${GENERATED_C} "${GAME_DATA_OBJECT}")
 target_include_directories(main PRIVATE
     "${ROOT}"
     "${ROOT}/sound"
