@@ -80,12 +80,28 @@ find_program(ARM_NONE_EABI_OBJCOPY arm-none-eabi-objcopy
     HINTS "$ENV{ARM_NONE_EABI_TOOLCHAIN}/bin"
     REQUIRED)
 
+# Localize each special-script index explicitly after the relocatable merge.
+# Explicit symbol names avoid relying on objcopy wildcard matching.
+file(STRINGS "${ROOT}/data/specials.inc" SPECIAL_LINES
+    REGEX "^[ \t]*def_special[ \t]+")
+set(SPECIAL_LOCALIZE_ARGS)
+foreach(LINE IN LISTS SPECIAL_LINES)
+    string(REGEX MATCH "def_special[ \t]+([A-Za-z0-9_]+)" _ "${LINE}")
+    if(CMAKE_MATCH_1)
+        list(APPEND SPECIAL_LOCALIZE_ARGS "--localize-symbol=SPECIAL_${CMAKE_MATCH_1}")
+    endif()
+endforeach()
+find_program(ARM_NONE_EABI_NM arm-none-eabi-nm
+    HINTS "$ENV{ARM_NONE_EABI_TOOLCHAIN}/bin"
+    REQUIRED)
+
 set(GAME_DATA_OBJECT "${CMAKE_BINARY_DIR}/generated/game_data.o")
 add_custom_command(
     OUTPUT "${GAME_DATA_OBJECT}"
     COMMAND "${CMAKE_COMMAND}" -E make_directory "${CMAKE_BINARY_DIR}/generated"
     COMMAND "${ARM_NONE_EABI_LD}" -r -o "${GAME_DATA_OBJECT}.tmp" ${MAKE_ASM_OBJECTS}
-    COMMAND "${ARM_NONE_EABI_OBJCOPY}" --wildcard --localize-symbol=SPECIAL_* --rename-section .rodata=.data,alloc,load,data,contents "${GAME_DATA_OBJECT}.tmp" "${GAME_DATA_OBJECT}"
+    COMMAND "${ARM_NONE_EABI_OBJCOPY}" ${SPECIAL_LOCALIZE_ARGS} --rename-section .rodata=.data,alloc,load,data,contents "${GAME_DATA_OBJECT}.tmp" "${GAME_DATA_OBJECT}"
+    COMMAND /bin/sh -c "'${ARM_NONE_EABI_NM}' -g '${GAME_DATA_OBJECT}' | grep SPECIAL_ || true"
     DEPENDS ${MAKE_ASM_OBJECTS}
     VERBATIM)
 set_source_files_properties("${GAME_DATA_OBJECT}"
