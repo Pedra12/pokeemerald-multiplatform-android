@@ -284,7 +284,7 @@ LittlerootTown_BrendansHouse_1F_Movement_BrendanGoUpstairs2:
 	step_end
 
 PlayersHouse_1F_Text_IsntItNiceInHere:
-	.string "MaE: Viu, {PLAYER}?\n"
+	.string "MAE: Viu, {PLAYER}?\n"
 	.string "Nao é legal aqui também?$"
 
 PlayersHouse_1F_Text_MoversPokemonGoSetClock:
@@ -298,24 +298,24 @@ PlayersHouse_1F_Text_MoversPokemonGoSetClock:
 	.string "Nao se esqueça de arrumar a hora dele!$"
 
 PlayersHouse_1F_Text_ArentYouInterestedInRoom:
-	.string "MaE: Ué, {PLAYER}?\p"
+	.string "MAE: Ué, {PLAYER}?\p"
 	.string "Nao tá interessado em ver seu\n"
 	.string "próprio quarto?$"
 
 PlayersHouse_1F_Text_GoSetTheClock:
-	.string "MaE: {PLAYER}.\p"
+	.string "MAE: {PLAYER}.\p"
 	.string "Vai lá arrumar o relógio, querido.$"
 
 PlayersHouse_1F_Text_OhComeQuickly:
-	.string "MaE: Ah! {PLAYER}, {PLAYER}!\n"
+	.string "MAE: Ah! {PLAYER}, {PLAYER}!\n"
 	.string "Rápido! Vem cá!$"
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn:
-	.string "MaE: Olha! É o GINáSIO DE PETALBURG!\n"
+	.string "MAE: Olha! É o GINASIO DE PETALBURG!\n"
 	.string "Talvez seu PAI esteja lá!$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim:
-	.string "MaE: Ah… acabou.\p"
+	.string "MAE: Ah… acabou.\p"
 	.string "Acho que seu PAI estava passando, mas perdemos.\n"
 	.string "Que pena.$"
 
@@ -327,22 +327,22 @@ PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
 	.string "deveria ir e se apresentar pra ele.$"
 
 PlayersHouse_1F_Text_SeeYouHoney:
-	.string "MaE: Te vejo mais tarde, querido!$"
+	.string "MAE: Te vejo mais tarde, querido!$"
 
 PlayersHouse_1F_Text_DidYouMeetProfBirch:
-	.string "MaE: Você se apresentou pro\n"
+	.string "MAE: Você se apresentou pro\n"
 	.string "PROF. BIRCH?$"
 
 PlayersHouse_1F_Text_YouShouldRestABit:
-	.string "MaE: Como você está, {PLAYER}?\n"
+	.string "MAE: Como você está, {PLAYER}?\n"
 	.string "Você parece um pouco cansado.\p"
 	.string "Eu acho que você devia descansar.$"
 
 PlayersHouse_1F_Text_TakeCareHoney:
-	.string "MaE: Tome cuidado, querido!$"
+	.string "MAE: Tome cuidado, querido!$"
 
 PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom:
-	.string "MaE: Eh? O seu PAI te deu essa INSíGNIA?\p"
+	.string "MAE: Eh? O seu PAI te deu essa INSIGNIA?\p"
 	.string "Entao aqui está algo da sua MaE!$"
 
 PlayersHouse_1F_Text_DontPushYourselfTooHard:
@@ -351,7 +351,7 @@ PlayersHouse_1F_Text_DontPushYourselfTooHard:
 	.string "Agora vai lá, querido!$"
 
 PlayersHouse_1F_Text_IsThatAPokenav:
-	.string "MaE: O que e isso, querido? Um POKéNAV?\n"
+	.string "MAE: O que e isso, querido? Um POKéNAV?\n"
 	.string "Alguem da DEVON deu isso a voce?\p"
 	.string "Entao, querido, que tal registrar\n"
 	.string "sua mae?\p"
@@ -407,13 +407,13 @@ PlayersHouse_1F_Text_BetterGetBackToGym:
 	.string "enquanto estou fora.$"
 
 PlayersHouse_1F_Text_DadShouldStayLonger:
-	.string "MaE: Esse seu PAI…\p"
+	.string "MAE: Esse seu PAI…\p"
 	.string "Ele volta para casa pela primeira vez em\n"
 	.string "um bom tempo, mas so fala de POKéMON.\p"
 	.string "Ele devia descansar e ficar mais um pouco.$"
 
 PlayersHouse_1F_Text_IsThatABreakingStory:
-	.string "MaE: Isso e uma noticia urgente?$"
+	.string "MAE: Isso e uma noticia urgente?$"
 
 PlayersHouse_1F_Text_LatiEmergencyNewsFlash:
 	.string "Interrompemos a programacao para\n"
@@ -427,10 +427,10 @@ PlayersHouse_1F_Text_LatiEmergencyNewsFlash:
 	.string "programacao normal.$"
 
 PlayersHouse_1F_Text_WhatColorDidTheySay:
-	.string "MaE: {PLAYER}, voce ouviu isso?\p"
+	.string "MAE: {PLAYER}, voce ouviu isso?\p"
 	.string "Que cor o apresentador disse\n"
 	.string "que era aquele POKéMON?$"
 
 PlayersHouse_1F_Text_StillUnknownPokemon:
-	.string "MaE: Mas que coisa interessante!\n"
+	.string "MAE: Mas que coisa interessante!\n"
 	.string "Ainda existem POKéMON desconhecidos.$"
