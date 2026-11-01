@@ -65,8 +65,8 @@ jobs:
 
       - name: Apply SDL2 Android lifecycle patch
         run: |
-          git -C android/SDL2 apply --check ../patches/sdl2-android-lifecycle.patch
-          git -C android/SDL2 apply ../patches/sdl2-android-lifecycle.patch
+          git -C android/SDL2 apply --check --unidiff-zero ../patches/sdl2-android-lifecycle.patch
+          git -C android/SDL2 apply --unidiff-zero ../patches/sdl2-android-lifecycle.patch
 
       - name: Build debug APK
         env:
