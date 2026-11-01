@@ -65,7 +65,6 @@ struct SiiRtcInfo internalClock;
 static FILE *sSaveFile = NULL;
 static char sSavePath[1024] = "pokeemerald.sav";
 static char sConfigPath[1024] = "pokeemerald.cfg";
-static char sDebugPath[1024] = "pokeemerald_debug.log";
 static u8 sBorderBackground;
 static bool sHasBorderBackgroundConfig;
 static u8 sBackgroundOrderVersion;
@@ -148,7 +147,6 @@ int main(int argc, char **argv)
     {
         SDL_snprintf(sSavePath, sizeof(sSavePath), "%spokeemerald.sav", prefPath);
         SDL_snprintf(sConfigPath, sizeof(sConfigPath), "%spokeemerald.cfg", prefPath);
-        SDL_snprintf(sDebugPath, sizeof(sDebugPath), "%spokeemerald_debug.log", prefPath);
         SDL_free(prefPath);
     }
 #endif
@@ -349,20 +347,6 @@ int main(int argc, char **argv)
         REG_VCOUNT = 161;
 #endif
 #endif
-    /* Show the last saved checkpoint from a previous crash before starting a new run. */
-    {
-        FILE *debugFile = fopen(sDebugPath, "rb");
-        if (debugFile != NULL)
-        {
-            char debugMessage[1024];
-            size_t debugLength = fread(debugMessage, 1, sizeof(debugMessage) - 1, debugFile);
-            debugMessage[debugLength] = '\0';
-            fclose(debugFile);
-            remove(sDebugPath);
-            if (debugLength > 0)
-                SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_INFORMATION, "Pokemon Emerald - Diagnostico", debugMessage, sdlWindow);
-        }
-    }
     mainLoopThread = SDL_CreateThread(DoMain, "AgbMain", NULL);
 
     double accumulator = 0.0;
@@ -626,21 +610,6 @@ static void StoreSaveFile()
 void Platform_StoreSaveFile(void)
 {
     StoreSaveFile();
-}
-
-void Platform_DebugCheckpoint(const char *message)
-{
-    FILE *debugFile;
-    if (message == NULL)
-        return;
-    SDL_Log("GAME CHECKPOINT: %s", message);
-    debugFile = fopen(sDebugPath, "wb");
-    if (debugFile != NULL)
-    {
-        fputs(message, debugFile);
-        fflush(debugFile);
-        fclose(debugFile);
-    }
 }
 
 void Platform_ReadFlash(u16 sectorNum, u32 offset, u8 *dest, u32 size)
