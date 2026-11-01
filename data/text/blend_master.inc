@@ -5,19 +5,19 @@ BerryBlender_Text_BlendWithTheBlendMaster:
 	.string "toda a minha habilidade!$"
 
 BerryBlender_Text_SeeMyMasteryInAction:
-	.string "MESTRE DO LIQUIDIFICADOR: Hmmm! Então você quer\n"
-	.string "ver minha habilidade em ação?$"
+	.string "MESTRE DO LIQUIDIFICADOR: Hmmm! Entao você quer\n"
+	.string "ver minha habilidade em açao?$"
 
 BerryBlender_Text_TooBusyNowIsee:
 	.string "Hmmm!\p"
-	.string "Então você está ocupado agora, pelo visto!\p"
-	.string "Mas não se preocupe!\n"
+	.string "Entao você está ocupado agora, pelo visto!\p"
+	.string "Mas nao se preocupe!\n"
 	.string "Estarei aqui o dia todo!\l"
 	.string "Volte assim que terminar o que precisa!$"
 
 BerryBlender_Text_BlendMasterNoBerries:
 	.string "Hmmm!\p"
-	.string "Você não tem nenhuma BERRY!\p"
+	.string "Você nao tem nenhuma BERRY!\p"
 	.string "I shall be here all day!\n"
 	.string "Volte quando tiver algumas BERRIES!$"
 
@@ -32,20 +32,20 @@ BerryBlender_Text_BlendMasterExplainBerryBlending:
 	.string "Hmmm!\p"
 	.string "Ah, mas é um processo simples!\p"
 	.string "Quando a seta do LIQUIDIFICADOR chegar\n"
-	.string "ao seu marcador, aperte o Botão A.\p"
+	.string "ao seu marcador, aperte o Botao A.\p"
 	.string "É só isso que você precisa fazer.\p"
-	.string "Quando vir a precisão com que aperto\n"
-	.string "o Botão A, você vai entender.$"
+	.string "Quando vir a precisao com que aperto\n"
+	.string "o Botao A, você vai entender.$"
 
 BerryBlender_Text_BlendMasterLetsBerryBlender:
 	.string "Fine!\p"
-	.string "Então vamos começar!\p"
+	.string "Entao vamos começar!\p"
 	.string "Todos juntos com o MESTRE DO LIQUIDIFICADOR,\n"
 	.string "vamos usar o MISTURADOR DE BERRIES!$"
 
 BerryBlender_Text_BlendMasterNoPokeblockCase:
 	.string "Hmmm!\p"
-	.string "Parece que você ainda não conseguiu\n"
+	.string "Parece que você ainda nao conseguiu\n"
 	.string "o PORTA-{POKEBLOCK}!\p"
 	.string "I shall be here all day!\n"
 	.string "Consiga o PORTA-{POKEBLOCK} e volte logo!$"
