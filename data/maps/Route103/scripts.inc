@@ -334,18 +334,18 @@ Route103_Text_BrendanTimeToHeadBack:
 	.string "em você.\p"
 	.string "Veja, seu POKÉMON já gosta de você,\n"
 	.string "mesmo tendo acabado de recebê-lo.\p"
-	.string "{PLAYER}, tenho a impressão de que você\n"
+	.string "{PLAYER}, tenho a impressao de que você\n"
 	.string "consegue fazer amizade com qualquer POKÉMON.\p"
 	.string "Devemos voltar ao LABORATÓRIO.$"
 
 Route103_Text_ShouldHaveBroughtPotion:
 	.string "Meu POKÉMON está exausto…\n"
-	.string "Eu devia ter trazido uma POÇÃO…$"
+	.string "Eu devia ter trazido uma POÇAO…$"
 
 Route103_Text_ShortcutToOldale:
 	.string "Se atravessar o mar daqui,\n"
 	.string "você chegará mais rápido à CIDADE DE OLDALE.\p"
-	.string "Hehehe, isso é útil, não é?$"
+	.string "Hehehe, isso é útil, nao é?$"
 
 Route103_Text_RouteSign:
 	.string "ROTA 103\n"
