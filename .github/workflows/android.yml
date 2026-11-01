@@ -41,7 +41,9 @@ jobs:
           import subprocess
 
           roots = ["src", "gflib", "data", "asm", "include", "sound"]
-          pattern = re.compile(r'INCBIN_[A-Za-z0-9_]+\s*\(\s*"([^"]+)"|\.incbin\s+"([^"]+)"')
+          incbin_pattern = re.compile(r'INCBIN_[A-Za-z0-9_]+\s*\((.*?)\)', re.DOTALL)
+          asm_pattern = re.compile(r'\.incbin\s+"([^"]+)"')
+          string_pattern = re.compile(r'"([^"]+)"')
           assets = set()
           for root in roots:
               base = pathlib.Path(root)
@@ -53,8 +55,12 @@ jobs:
                           source = path.read_text(encoding="utf-8")
                       except UnicodeDecodeError:
                           continue
-                      for match in pattern.finditer(source):
-                          asset = match.group(1) or match.group(2)
+                      for match in incbin_pattern.finditer(source):
+                          for asset in string_pattern.findall(match.group(1)):
+                              if asset and not asset.startswith("/"):
+                                  assets.add(asset)
+                      for match in asm_pattern.finditer(source):
+                          asset = match.group(1)
                           if asset and not asset.startswith("/"):
                               assets.add(asset)
 
