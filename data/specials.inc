@@ -1,7 +1,6 @@
 .macro def_special ptr
 .global SPECIAL_\ptr
-.local SPECIAL_\ptr
-.equ SPECIAL_\ptr, __special__
+.set SPECIAL_\ptr, __special__
 .set __special__, __special__ + 1
 	.int \ptr
 	.endm
