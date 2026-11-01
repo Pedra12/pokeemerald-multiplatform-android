@@ -5,6 +5,9 @@
 #include "siirtc.h"
 
 void Platform_StoreSaveFile(void);
+#ifdef PLATFORM_SDL2
+void Platform_DebugCheckpoint(const char *message);
+#endif
 void Platform_ReadFlash(u16 sectorNum, u32 offset, u8 *dest, u32 size);
 void Platform_QueueAudio(float *audioBuffer, s32 samplesPerFrame);
 u16 Platform_GetKeyInput(void);
