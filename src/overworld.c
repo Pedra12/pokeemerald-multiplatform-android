@@ -425,13 +425,9 @@ static void UpdateMiscOverworldStates(void)
 {
     FlagClear(FLAG_SYS_SAFARI_MODE);
     ChooseAmbientCrySpecies();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after ChooseAmbientCrySpecies");
     ResetCyclingRoadChallengeData();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after ResetCyclingRoadChallengeData");
     UpdateLocationHistoryForRoamer();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after UpdateLocationHistoryForRoamer");
     RoamerMoveToOtherLocationSet();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after RoamerMoveToOtherLocationSet");
 }
 
 void ResetGameStats(void)
@@ -816,23 +812,16 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     LoadCurrentMapData();
     LoadObjEventTemplatesFromHeader();
     TrySetMapSaveWarpStatus();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after TrySetMapSaveWarpStatus");
     ClearTempFieldEventData();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after ClearTempFieldEventData");
     ResetCyclingRoadChallengeData();
     RestartWildEncounterImmunitySteps();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after RestartWildEncounterImmunitySteps");
     TryUpdateRandomTrainerRematches(mapGroup, mapNum);
     DoTimeBasedEvents();
     SetSavedWeatherFromCurrMapHeader();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after SetSavedWeatherFromCurrMapHeader");
     ChooseAmbientCrySpecies();
     SetDefaultFlashLevel();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after SetDefaultFlashLevel");
     Overworld_ClearSavedMusic();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after Overworld_ClearSavedMusic");
     RunOnTransitionMapScript();
-    DEBUG_CHECKPOINT("LoadMapFromWarp: after RunOnTransitionMapScript");
     InitMap();
     CopySecondaryTilesetToVramUsingHeap(gMapHeader.mapLayout);
     LoadSecondaryTilesetPalette(gMapHeader.mapLayout);
@@ -862,12 +851,14 @@ static void LoadMapFromWarp(bool32 a1)
     DEBUG_CHECKPOINT("LoadMapFromWarp: after LoadCurrentMapData");
     if (!(sObjectEventLoadFlag & SKIP_OBJECT_EVENT_LOAD))
     {
+        DEBUG_CHECKPOINT("LoadMapFromWarp: before object event templates");
         if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
             LoadBattlePyramidObjectEventTemplates();
         else if (InTrainerHill())
             LoadTrainerHillObjectEventTemplates();
         else
             LoadObjEventTemplatesFromHeader();
+        DEBUG_CHECKPOINT("LoadMapFromWarp: after object event templates");
     }
 
     DEBUG_CHECKPOINT("LoadMapFromWarp: before map type checks");
@@ -878,22 +869,34 @@ static void LoadMapFromWarp(bool32 a1)
     CheckLeftFriendsSecretBase();
     DEBUG_CHECKPOINT("LoadMapFromWarp: after CheckLeftFriendsSecretBase");
     TrySetMapSaveWarpStatus();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after TrySetMapSaveWarpStatus");
     ClearTempFieldEventData();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after ClearTempFieldEventData");
     ResetCyclingRoadChallengeData();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after ResetCyclingRoadChallengeData");
     RestartWildEncounterImmunitySteps();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after RestartWildEncounterImmunitySteps");
     TryUpdateRandomTrainerRematches(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
     DEBUG_CHECKPOINT("LoadMapFromWarp: after TryUpdateRandomTrainerRematches");
     if (a1 != TRUE)
         DoTimeBasedEvents();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after time-based events");
     SetSavedWeatherFromCurrMapHeader();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after SetSavedWeatherFromCurrMapHeader");
     ChooseAmbientCrySpecies();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after ChooseAmbientCrySpecies");
     if (isOutdoors)
         FlagClear(FLAG_SYS_USE_FLASH);
     SetDefaultFlashLevel();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after SetDefaultFlashLevel");
     Overworld_ClearSavedMusic();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after Overworld_ClearSavedMusic");
     RunOnTransitionMapScript();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after RunOnTransitionMapScript");
     UpdateLocationHistoryForRoamer();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after UpdateLocationHistoryForRoamer");
     RoamerMoveToOtherLocationSet();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after RoamerMoveToOtherLocationSet");
     if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
         InitBattlePyramidMap(FALSE);
     else if (InTrainerHill())
@@ -905,9 +908,11 @@ static void LoadMapFromWarp(bool32 a1)
     if (a1 != TRUE && isIndoors)
     {
         UpdateTVScreensOnMap(gBackupMapLayout.width, gBackupMapLayout.height);
+        DEBUG_CHECKPOINT("LoadMapFromWarp: after UpdateTVScreensOnMap");
         InitSecretBaseAppearance(TRUE);
-    DEBUG_CHECKPOINT("LoadMapFromWarp: completed");
+        DEBUG_CHECKPOINT("LoadMapFromWarp: after InitSecretBaseAppearance");
     }
+    DEBUG_CHECKPOINT("LoadMapFromWarp: completed");
 }
 
 void ResetInitialPlayerAvatarState(void)
