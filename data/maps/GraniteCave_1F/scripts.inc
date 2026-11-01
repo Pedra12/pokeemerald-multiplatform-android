@@ -23,7 +23,7 @@ GraniteCave_1F_Text_GetsDarkAheadHereYouGo:
 	.string "Vai ser difícil explorar por lá.\p"
 	.string "Aquele rapaz que passou por aqui…\n"
 	.string "Acho que era STEVEN.\p"
-	.string "Ele sabia usar FLASH, então deve ficar\n"
+	.string "Ele sabia usar FLASH, entao deve ficar\n"
 	.string "bem, mas…\p"
 	.string "Bem, para nós, MONTANHISTAS, ajudar\n"
 	.string "quem encontramos é nosso lema.\p"
@@ -32,7 +32,7 @@ GraniteCave_1F_Text_GetsDarkAheadHereYouGo:
 GraniteCave_1F_Text_ExplainFlash:
 	.string "Ensine o golpe oculto FLASH a\n"
 	.string "um POKÉMON e use-o.\p"
-	.string "Ele ilumina até a escuridão total\n"
+	.string "Ele ilumina até a escuridao total\n"
 	.string "das cavernas.\p"
 	.string "Mas, para usá-lo, você precisa da INSÍGNIA\n"
 	.string "do GINÁSIO POKÉMON de DEWFORD.$"
