@@ -425,9 +425,13 @@ static void UpdateMiscOverworldStates(void)
 {
     FlagClear(FLAG_SYS_SAFARI_MODE);
     ChooseAmbientCrySpecies();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after ChooseAmbientCrySpecies");
     ResetCyclingRoadChallengeData();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after ResetCyclingRoadChallengeData");
     UpdateLocationHistoryForRoamer();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after UpdateLocationHistoryForRoamer");
     RoamerMoveToOtherLocationSet();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after RoamerMoveToOtherLocationSet");
 }
 
 void ResetGameStats(void)
@@ -812,16 +816,23 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     LoadCurrentMapData();
     LoadObjEventTemplatesFromHeader();
     TrySetMapSaveWarpStatus();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after TrySetMapSaveWarpStatus");
     ClearTempFieldEventData();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after ClearTempFieldEventData");
     ResetCyclingRoadChallengeData();
     RestartWildEncounterImmunitySteps();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after RestartWildEncounterImmunitySteps");
     TryUpdateRandomTrainerRematches(mapGroup, mapNum);
     DoTimeBasedEvents();
     SetSavedWeatherFromCurrMapHeader();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after SetSavedWeatherFromCurrMapHeader");
     ChooseAmbientCrySpecies();
     SetDefaultFlashLevel();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after SetDefaultFlashLevel");
     Overworld_ClearSavedMusic();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after Overworld_ClearSavedMusic");
     RunOnTransitionMapScript();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after RunOnTransitionMapScript");
     InitMap();
     CopySecondaryTilesetToVramUsingHeap(gMapHeader.mapLayout);
     LoadSecondaryTilesetPalette(gMapHeader.mapLayout);
@@ -846,7 +857,9 @@ static void LoadMapFromWarp(bool32 a1)
     bool8 isOutdoors;
     bool8 isIndoors;
 
+    DEBUG_CHECKPOINT("LoadMapFromWarp: before LoadCurrentMapData");
     LoadCurrentMapData();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after LoadCurrentMapData");
     if (!(sObjectEventLoadFlag & SKIP_OBJECT_EVENT_LOAD))
     {
         if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
@@ -857,15 +870,19 @@ static void LoadMapFromWarp(bool32 a1)
             LoadObjEventTemplatesFromHeader();
     }
 
+    DEBUG_CHECKPOINT("LoadMapFromWarp: before map type checks");
     isOutdoors = IsMapTypeOutdoors(gMapHeader.mapType);
     isIndoors = IsMapTypeIndoors(gMapHeader.mapType);
 
+    DEBUG_CHECKPOINT("LoadMapFromWarp: before CheckLeftFriendsSecretBase");
     CheckLeftFriendsSecretBase();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after CheckLeftFriendsSecretBase");
     TrySetMapSaveWarpStatus();
     ClearTempFieldEventData();
     ResetCyclingRoadChallengeData();
     RestartWildEncounterImmunitySteps();
     TryUpdateRandomTrainerRematches(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after TryUpdateRandomTrainerRematches");
     if (a1 != TRUE)
         DoTimeBasedEvents();
     SetSavedWeatherFromCurrMapHeader();
@@ -883,11 +900,13 @@ static void LoadMapFromWarp(bool32 a1)
         InitTrainerHillMap();
     else
         InitMap();
+    DEBUG_CHECKPOINT("LoadMapFromWarp: after map-specific initialization");
 
     if (a1 != TRUE && isIndoors)
     {
         UpdateTVScreensOnMap(gBackupMapLayout.width, gBackupMapLayout.height);
         InitSecretBaseAppearance(TRUE);
+    DEBUG_CHECKPOINT("LoadMapFromWarp: completed");
     }
 }
 
