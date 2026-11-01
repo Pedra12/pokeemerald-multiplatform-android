@@ -62,50 +62,50 @@ SlateportCity_NameRatersHouse_EventScript_NewNameDifferent::
 	end
 
 SlateportCity_NameRatersHouse_Text_PleasedToRateMonNickname:
-	.string "Hi, hi! I'm the NAME RATER!\n"
-	.string "I'm the fortune-teller of names!\p"
-	.string "I shall be pleased to rate your\n"
-	.string "POKéMON's nickname.$"
+	.string "Olá, olá! Sou o AVALIADOR DE APELIDOS!\n"
+	.string "Sou o especialista em nomes!\p"
+	.string "Terei prazer em avaliar o apelido\n"
+	.string "do seu POKéMON.$"
 
 SlateportCity_NameRatersHouse_Text_CritiqueWhichMonNickname:
-	.string "Which POKéMON's nickname should\n"
-	.string "I critique?$"
+	.string "O apelido de qual POKéMON devo\n"
+	.string "avaliar?$"
 
 SlateportCity_NameRatersHouse_Text_FineNameSuggestBetterOne:
-	.string "Hmmm… {STR_VAR_1}, is it? That is\n"
-	.string "quite a fine name you bestowed.\p"
-	.string "But! What say you, if I were to\n"
-	.string "suggest a slightly better name?$"
+	.string "Hmm… {STR_VAR_1}, é? Esse é\n"
+	.string "um nome muito bonito que você escolheu.\p"
+	.string "Mas! O que acha se eu\n"
+	.string "sugerir um nome um pouco melhor?$"
 
 SlateportCity_NameRatersHouse_Text_WhatShallNewNameBe:
-	.string "Ah, good. Then, what shall the new\n"
-	.string "nickname be?$"
+	.string "Muito bem. Entao, qual será o novo\n"
+	.string "apelido?$"
 
 SlateportCity_NameRatersHouse_Text_MonShallBeKnownAsName:
-	.string "Done! From now on, this POKéMON\n"
-	.string "shall be known as {STR_VAR_1}!\p"
-	.string "It is a better name than before!\n"
-	.string "How fortunate for you!$"
+	.string "Pronto! A partir de agora, este POKéMON\n"
+	.string "será conhecido como {STR_VAR_1}!\p"
+	.string "É um nome melhor do que o anterior!\n"
+	.string "Que sorte a sua!$"
 
 SlateportCity_NameRatersHouse_Text_DoVisitAgain:
-	.string "I see.\n"
-	.string "Do come visit again.$"
+	.string "Entendo.\n"
+	.string "Volte sempre.$"
 
 SlateportCity_NameRatersHouse_Text_NameNoDifferentYetSuperior:
-	.string "Done! From now on, this POKéMON\n"
-	.string "shall be known as {STR_VAR_1}!\p"
-	.string "It looks no different from before,\n"
-	.string "and yet, this is vastly superior!\p"
-	.string "How fortunate for you!$"
+	.string "Pronto! A partir de agora, este POKéMON\n"
+	.string "será conhecido como {STR_VAR_1}!\p"
+	.string "Parece igual a antes,\n"
+	.string "mas este nome é muito melhor!\p"
+	.string "Que sorte a sua!$"
 
 SlateportCity_NameRatersHouse_Text_MagnificentName:
-	.string "Hmmm… {STR_VAR_1} it is!\p"
-	.string "This is a magnificent nickname!\n"
-	.string "It is impeccably beyond reproach!\p"
-	.string "You'll do well to cherish your\n"
-	.string "{STR_VAR_1} now and beyond.$"
+	.string "Hmm… {STR_VAR_1}, entao!\p"
+	.string "Este é um apelido magnífico!\n"
+	.string "É simplesmente impecável!\p"
+	.string "Cuide muito bem do seu\n"
+	.string "{STR_VAR_1} daqui em diante.$"
 
 SlateportCity_NameRatersHouse_Text_ThatIsMerelyAnEgg:
-	.string "Now, now.\n"
-	.string "That is merely an EGG!$"
+	.string "Calma, calma.\n"
+	.string "Isso é apenas um OVO!$"
 
